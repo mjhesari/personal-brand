@@ -17,6 +17,7 @@ export default function AboutSection({dicts}:{dicts:DictsTypes}) {
     <section className="mt-20" id="#about">
       <Title text={dicts.menuItems.about}/>
       <div className="bg-background p-8 shadow-sm rounded-2xl">
+        <h3>{name?.[dicts.lang]?? ''}</h3>
         <p className="whitespace-pre text-wrap leading-7">{description?.[dicts.lang] ?? ''}</p>
       </div>
     </section>
