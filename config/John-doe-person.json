@@ -1,0 +1,96 @@
+{
+    "pr001" : {
+        "id": "pr001",
+        "firstName": "John",
+        "lastName": "Doe Samuel",
+        "jobTitle": "Senior Product Designer",
+        "about": "<h3 class='text-xl'>My Journey In Design World!</h3>\n\nAs a product designer with over four years of dedicated experience, I am passionate about staying ahead in a fast-evolving industry by continuously exploring new design trends, tools, and emerging technologies. My design philosophy combines a strategic, detail-oriented approach with a commitment to creating solutions that not only meet functional requirements but also enhance user experience through aesthetic appeal.\n\n Throughout my career, I have honed a keen ability to tackle complex design challenges with innovative thinking and a user-centered perspective. I believe that effective design goes beyond mere visual appeal; it should serve a clear purpose, simplify processes, and make interactions more intuitive and enjoyable for users. My design process is grounded in research, analysis, and iteration, ensuring that each project I undertake is meticulously crafted to meet both the client's objectives and the end user's needs.\n\nDriven by a strong sense of purpose and a dedication to excellence, I consistently strive to refine and elevate my work. I find immense satisfaction in pushing creative boundaries, learning from feedback, and adapting my methods to achieve impactful results. My work is not just about creating visually compelling products but about building meaningful, practical solutions that leave a lasting impression and contribute positively to people's lives. Whether working on small details or large-scale projects, I am committed to producing designs that are both effective and memorable.",
+        "image": "image_pr001.png",
+        "experiences": [
+            {
+                "id": "xp01",
+                "companyName": "Google ince",
+                "companyLogo": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731735849908570.png",
+                "jobTitle": "Senior Product Designer",
+                "start": "2023-10-04",
+                "end": "Present"
+            },
+            {
+                "id": "xp02",
+                "companyName": "Cafe Bazaar",
+                "companyLogo": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731735967722de1.png",
+                "jobTitle": "Senior UX Designer",
+                "start": "2021-09-08",
+                "end": "2023-28-02"
+            },
+            {
+                "id": "xp03",
+                "companyName": "Divar inc",
+                "companyLogo": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731735889643991.png",
+                "jobTitle": "Principal Product Designer",
+                "start": "2019-09-08",
+                "end": "2021-10-02"
+            },
+            {
+                "id": "xp04",
+                "companyName": "Microsoft",
+                "companyLogo": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731735951326185.png",
+                "jobTitle": "Senior UX Designer",
+                "start": "2017-05-03",
+                "end": "2019-10-05"
+            }
+        ],
+        "projects": [
+            {
+                "id": "pj001",
+                "name": "Musicio",
+                "mainImage": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731736074769b20.png",
+                "url": "https://google.com"
+            },
+            {
+                "id": "pj002",
+                "name": "Activito",
+                "mainImage": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731736161626a2c.png",
+                "url": "https://google.com"
+            },
+            {
+                "id": "pj003",
+                "name": "Exchango",
+                "mainImage": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731737423468741.png",
+                "url": "https://google.com"
+            },
+            {
+                "id": "pj004",
+                "name": "Dashma",
+                "mainImage": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731737492489873.png",
+                "url": "https://google.com"
+            }
+        ],
+        "links": [
+            {
+                "id": "lk001",
+                "name": "github",
+                "icon": "https://s2.webstatic.net/local-business/amirkabir-8f4/17317376393973e3.png",
+                "url": "https://github.com/"
+            },
+            {
+                "id": "lk002",
+                "name": "linkedin",
+                "icon": "https://s2.webstatic.net/local-business/amirkabir-8f4/1731737676652de1.png",
+                "url": "https://linkedin.com/"
+            },
+            {
+                "id": "lk003",
+                "name": "twitter",
+                "icon": "https://s2.webstatic.net/local-business/amirkabir-8f4/173173775255923e.png",
+                "url": "https://x.com/"
+            },
+            {
+                "id": "lk004",
+                "name": "instagram",
+                "icon": "https://s2.webstatic.net/local-business/amirkabir-8f4/17317377972048da.png",
+                "url": "https://instagram.com/"
+            }
+        ]
+    }
+}
