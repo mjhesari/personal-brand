@@ -3,13 +3,17 @@ export const PERSONS = {
     id: '1',
     firstName: 'MJ',
     lastName: 'HESARI',
-    jobTitle: 'NEXT JS FRONTEND DEVELOOPER',
+    jobTitle: {
+      en: 'FULL STACK & NEXT.JS DEVELOPER',
+      fa: 'توسعه‌دهنده فول‌استک و Next.js',
+    },
     logo: 'https://s34.picofile.com/file/8486208242/3%D8%A7%D8%B5%D9%84%DB%8Cmj.png',
     image:
       'https://hesari-storage.s3.ir-tbz-sh1.arvanstorage.ir/MJ%2FPicsart_24-11-16_23-39-36-378.webp?versionId=',
+    email: 'hesarimj@gmail.com',
     about: {
-      en: 'Frontend developer with 3 years of experience in Next.js and React.js with TypeScript. Skilled in Tailwind CSS and HeroUI Kit. Currently 24 years old, living in Mashhad, Iran. Experienced in Redux for large-scale projects and currently learning DevOps. Proficient in micro-frontend architecture and SSR, SSG, ISR techniques. Fully SEO-optimized development approach.',
-      fa: 'توسعه‌دهنده فرانت‌اند با 3 سال تجربه در Next.js و React.js همراه با TypeScript. مهارت در Tailwind CSS و HeroUI Kit. 24 ساله، ساکن مشهد، ایران. تجربه در Redux برای پروژه‌های بزرگ و در حال یادگیری DevOps. تسلط بر معماری میکروفرانت‌اند و تکنیک‌های SSR، SSG، ISR. رویکرد کاملاً بهینه‌سازی شده برای SEO.',
+      en: 'Full Stack Developer with 4+ years of experience using React, Next.js, and TypeScript. Skilled in building scalable and maintainable web applications, improving performance, and creating practical, user-friendly interfaces. Experienced in leading Front-End Development, planning features, and working with product teams. Focused on clean code, consistent architecture, and efficient workflows.',
+      fa: 'توسعه‌دهنده فول‌استک با بیش از ۴ سال تجربه در React، Next.js و TypeScript. مهارت در ساخت اپلیکیشن‌های مقیاس‌پذیر و قابل نگهداری، بهبود پرفورمنس و طراحی رابط‌های کاربردی. تجربه رهبری تیم فرانت‌اند، برنامه‌ریزی فیچر و همکاری با تیم محصول. تمرکز روی کد تمیز، معماری منسجم و ورک‌فلو کارآمد.',
     },
     experiences: [
       {
@@ -18,8 +22,8 @@ export const PERSONS = {
         companyLogo:
           'https://hesari-storage.s3.ir-tbz-sh1.arvanstorage.ir/MJ%2FLogo.png?versionId=',
         jobTitle: 'Frontend Next.js Developer',
-        start: '2024-05-10',
-        end: '2025-05-30',
+        start: '2024-08',
+        end: '2025-08',
       },
       {
         id: '2',
@@ -27,7 +31,7 @@ export const PERSONS = {
         companyLogo:
           'https://hesari-storage.s3.ir-tbz-sh1.arvanstorage.ir/MJ%2Fphoto_2025-07-31_13-28-03.jpg?versionId=',
         jobTitle: 'Frontend Next.js Developer',
-        start: '2024-05-10',
+        start: '2024-08',
         end: 'Present',
       },
     ],
@@ -37,7 +41,7 @@ export const PERSONS = {
         name: 'Portfolio',
         mainImage:
           'https://hesari-storage.s3.ir-tbz-sh1.arvanstorage.ir/MJ%2FScreenshot%202025-08-01%20212136.webp?versionId=',
-        url: 'https://mj-hesari.netlify.app/',
+        url: 'https://mj-hesari.ir/',
       },
       {
         id: '2',
@@ -58,19 +62,19 @@ export const PERSONS = {
         id: '2',
         name: 'Telegram',
         icon: 'line-md:telegram',
-        url: 't.me/mjhe3ari',
+        url: 'https://t.me/Mjhe3ari',
       },
       {
         id: '3',
-        name: 'WhatsApp',
-        icon: 'ic:round-whatsapp',
-        url: 'https://wa.me/message/JMEBCQ6VOJ27F1',
-      },
-      {
-        id: '4',
         name: 'LinkedIn',
         icon: 'line-md:linkedin',
         url: 'https://www.linkedin.com/in/mj-hesari',
+      },
+      {
+        id: '4',
+        name: 'Instagram',
+        icon: 'line-md:instagram',
+        url: 'https://instagram.com/hesari.dev',
       },
     ],
   },

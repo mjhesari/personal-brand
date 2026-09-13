@@ -3,5 +3,65 @@
   "lang": "en",
   "contryCode": "1",
   "iso": "us",
-  "langName": "English"
+  "langName": "English",
+  "nav": {
+    "about": "ABOUT",
+    "experience": "EXPERIENCE",
+    "projects": "FEATURED PROJECTS",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "available": "Available for projects",
+    "resume": "My Resume"
+  },
+  "about": {
+    "title": "About Me"
+  },
+  "experiences": {
+    "title": "Work Experiences",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "view": "View project"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "haveProjects": "Have a project in mind?",
+    "reachOut": "Send a short message and I’ll get back within 24 hours.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about the project, timeline, and goals...",
+    "selectSubject": "What’s this about?",
+    "subjects": {
+      "general": "General",
+      "review": "Review",
+      "mentoring": "Mentoring",
+      "project": "Project"
+    },
+    "submit": "Send message",
+    "sending": "Sending...",
+    "sent": "Message ready — thanks!",
+    "followMe": "Direct channels",
+    "followDesc": "Prefer chat? Reach me on these channels anytime.",
+    "responseTime": "Typical reply: under 24h",
+    "copy": "Copy",
+    "copied": "Copied",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "openChat": "Open chat"
+  },
+  "footer": "Powered by MJ-HESARI",
+  "meta": {
+    "title": "MJ Hesari | Next.js Frontend Developer",
+    "description": "Frontend developer specializing in Next.js, React, and TypeScript. Building fast, SEO-friendly web experiences.",
+    "keywords": "MJ Hesari, Frontend Developer, Next.js, React, TypeScript, Portfolio"
+  }
 }

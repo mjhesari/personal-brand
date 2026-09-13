@@ -1,8 +1,9 @@
-const Title = ({text} : {text : string}) => {
-    return(
-        <p className="text-lg font-normal mb-10">
-            {text}
-        </p>
-    )
-}
-export default Title
+const Title = ({ text }: { text: string }) => {
+  return (
+    <p className="text-base md:text-lg font-medium text-foreground mb-6 md:mb-8">
+      {text}
+    </p>
+  );
+};
+
+export default Title;

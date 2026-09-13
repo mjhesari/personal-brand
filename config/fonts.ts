@@ -1,11 +1,6 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
+export const fontSans = Vazirmatn({
+  subsets: ["arabic", "latin"],
   variable: "--font-sans",
-});
-
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
 });
