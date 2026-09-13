@@ -4,12 +4,20 @@ import { Person } from '@/types/person';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
+import { DictsTypes } from '@/app/[lang]/dictionaries/dictionaries';
 
-// Dynamic Route: app/post/[id]/page.tsx
-export default function Hero({ personData }: { personData: Person }) {
+export default function Hero({
+  personData,
+  dicts,
+}: {
+  personData: Person;
+  dicts: DictsTypes;
+}) {
+  const lang = dicts.lang as keyof typeof personData.jobTitle;
+
   return (
     <div>
-      <div className="flex gap-10 flex-wrap md:flex-nowrap flex-col-reverse md:flex-row">
+      <div className="flex gap-6 md:gap-10 flex-wrap md:flex-nowrap flex-col-reverse md:flex-row">
         <div className="w-full md:w-1/2">
           <div>
             <Chip
@@ -19,43 +27,34 @@ export default function Hero({ personData }: { personData: Person }) {
                 </div>
               }
               variant="faded"
-              className="items-center h-auto px-[10px] text-success-600 text-base py-[5px] bg-[#F7F7F7] border border-[#E5E7EB]"
+              className="items-center h-auto px-[10px] text-success-600 text-sm sm:text-base py-[5px] bg-default-100 border border-default-200"
             >
-              Available for projects
+              {dicts.hero.available}
             </Chip>
           </div>
-          <div className="mt-10 flex flex-col gap-4 items-center md:items-start">
-            <h1 className="text-[#3D61FF] text-5xl md:text-7xl leading-[1] uppercase font-medium">
+          <div className="mt-6 md:mt-10 flex flex-col gap-3 md:gap-4 items-center md:items-start">
+            <h1 className="text-primary text-4xl sm:text-5xl md:text-7xl leading-[1] uppercase font-medium">
               {personData.firstName}
             </h1>
-            <h1 className="text-5xl md:text-7xl uppercase font-medium leading-[1.5]">
-              {' '}
+            <h1 className="text-4xl sm:text-5xl md:text-7xl uppercase font-medium leading-[1.3] md:leading-[1.5] text-foreground">
               {personData.lastName}
             </h1>
-            <p className="text-base md:text-2xl text-[#181535] font-medium">
-              {personData?.jobTitle}
+            <p className="text-sm sm:text-base md:text-2xl text-foreground font-medium text-center md:text-start">
+              {personData.jobTitle?.[lang]}
             </p>
-            <div className="mt-10 flex flex-col md:justify-between items-center md:items-start gap-10">
-              <div className="flex gap-8">
+            <div className="mt-6 md:mt-10 flex flex-col md:justify-between items-center md:items-start gap-6 md:gap-10">
+              <div className="flex gap-5 md:gap-8">
                 {personData.links
-                  ? personData?.links?.map((item) => {
-                      return (
-                          <Link href={item.url} key={item.url}>
-                            <Icon
-                              className="w-10 h-10"
-                              icon={item.icon}
-                            />
-                          </Link>
-                      )
-                    })
+                  ? personData.links.map((item) => (
+                      <Link href={item.url} key={item.url}>
+                        <Icon className="w-8 h-8 md:w-10 md:h-10" icon={item.icon} />
+                      </Link>
+                    ))
                   : null}
               </div>
-              <BaseButton className="bg-white">
-                <Icon
-                  className="w-10 h-10"
-                  icon="line-md:download-loop"
-                />
-                My Resume
+              <BaseButton className="bg-content1 text-foreground shadow-sm px-4 py-3">
+                <Icon className="w-8 h-8 md:w-10 md:h-10" icon="line-md:download-loop" />
+                {dicts.hero.resume}
               </BaseButton>
             </div>
           </div>
@@ -63,7 +62,7 @@ export default function Hero({ personData }: { personData: Person }) {
         <Image
           src={personData?.image ?? ''}
           alt={`${personData.firstName}'s profile`}
-          className="w-full md:w-1/2 rounded-xl"
+          className="w-full md:w-1/2 rounded-2xl object-cover"
           width={500}
           height={500}
         />

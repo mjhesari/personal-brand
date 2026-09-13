@@ -1,6 +1,67 @@
 {
-    "dir": "rtl",
-    "lang": "fa",
-    "contryCode": "98",
-    "iso": "ir",
-    "langName": "فارسی"}
+  "dir": "rtl",
+  "lang": "fa",
+  "contryCode": "98",
+  "iso": "ir",
+  "langName": "فارسی",
+  "nav": {
+    "about": "درباره من",
+    "experience": "سوابق کاری",
+    "projects": "پروژه‌ها",
+    "contact": "تماس"
+  },
+  "hero": {
+    "available": "آماده پذیرش پروژه",
+    "resume": "دانلود رزومه"
+  },
+  "about": {
+    "title": "درباره من"
+  },
+  "experiences": {
+    "title": "سوابق کاری",
+    "showMore": "مشاهده بیشتر",
+    "showLess": "مشاهده کمتر"
+  },
+  "projects": {
+    "title": "پروژه‌های منتخب",
+    "view": "مشاهده پروژه"
+  },
+  "contact": {
+    "title": "تماس با من",
+    "haveProjects": "پروژه‌ای در ذهن دارید؟",
+    "reachOut": "یک پیام کوتاه بفرستید؛ معمولاً تا ۲۴ ساعت پاسخ می‌دهم.",
+    "name": "نام",
+    "namePlaceholder": "نام شما",
+    "email": "ایمیل",
+    "emailPlaceholder": "you@example.com",
+    "message": "پیام",
+    "messagePlaceholder": "درباره پروژه، زمان‌بندی و هدفتان بنویسید...",
+    "selectSubject": "موضوع پیام چیست؟",
+    "subjects": {
+      "general": "عمومی",
+      "review": "بررسی",
+      "mentoring": "منتورینگ",
+      "project": "پروژه"
+    },
+    "submit": "ارسال پیام",
+    "sending": "در حال ارسال...",
+    "sent": "پیام آماده شد — ممنون!",
+    "followMe": "راه‌های مستقیم",
+    "followDesc": "ترجیح می‌دهید چت کنید؟ از این کانال‌ها در دسترس هستم.",
+    "responseTime": "پاسخ معمول: کمتر از ۲۴ ساعت",
+    "copy": "کپی",
+    "copied": "کپی شد",
+    "emailLabel": "ایمیل",
+    "phoneLabel": "تلفن",
+    "whatsapp": "واتساپ",
+    "telegram": "تلگرام",
+    "instagram": "اینستاگرام",
+    "openChat": "شروع گفتگو"
+  },
+  "footer": "طراحی و توسعه: MJ-HESARI",
+  "meta": {
+    "title": "MJ Hesari | توسعه‌دهنده فرانت‌اند Next.js",
+    "description": "توسعه‌دهنده فرانت‌اند با تخصص در Next.js، React و TypeScript. ساخت تجربه‌های وب سریع و بهینه‌شده برای SEO.",
+    "keywords": "MJ Hesari, توسعه‌دهنده فرانت‌اند, Next.js, React, TypeScript, پرتفولیو"
+  }
+}

@@ -70,16 +70,18 @@ export interface Person {
   id: string;
   firstName: string;
   lastName: string;
-  jobTitle: string;
+  jobTitle: MultiLangText;
   logo: string;
-  about: MultiLangText; 
+  about: MultiLangText;
   image: string;
+  email: string;
+  phone?: string;
   experiences: Experience[];
   projects: Project[];
   links: SocialLink[];
 }
 
-interface Experience {
+export interface Experience {
   id: string;
   companyName: string;
   companyLogo: string;
@@ -88,14 +90,14 @@ interface Experience {
   end: string;   // Format: YYYY-MM-DD or "Present"
 }
 
-interface Project {
+export interface Project {
   id: string;
   name: string;
   mainImage: string;
   url: string;
 }
 
-interface SocialLink {
+export interface SocialLink {
   id: string;
   name:string // restrict to known platforms
   icon: string;

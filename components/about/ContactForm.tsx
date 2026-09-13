@@ -1,93 +1,142 @@
-"use client"
-import { Input } from "@nextui-org/input";
-import { Radio, RadioGroup } from "@nextui-org/react";
-import BaseButton from "../common/BaseButton";
-import useMediaQuery from "@/Hooks/useMediaQuery";
+'use client';
 
-export default function ContactForm() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+import { FormEvent, useState } from 'react';
+import { Input, Textarea } from '@nextui-org/input';
+import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
+import { DictsTypes } from '@/app/[lang]/dictionaries/dictionaries';
+
+const SUBJECTS = ['general', 'review', 'mentoring', 'project'] as const;
+type SubjectKey = (typeof SUBJECTS)[number];
+
+export default function ContactForm({ dicts }: { dicts: DictsTypes }) {
+  const [subject, setSubject] = useState<SubjectKey>('project');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('sending');
+    window.setTimeout(() => setStatus('sent'), 700);
+    window.setTimeout(() => setStatus('idle'), 2600);
+  };
 
   return (
-    <div className="bg-background p-8 rounded-2xl flex flex-col justify-between gap-8">
+    <motion.form
+      onSubmit={onSubmit}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+      className="bg-content1 p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm flex flex-col gap-6 md:gap-7 h-full"
+    >
       <div>
-        <p className="text-xl font-semibold mb-4">Have Any Projects?</p>
-        <p>Reach out and I'll get in touch within 24 hours.</p>
+        <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+          {dicts.contact.haveProjects}
+        </h3>
+        <p className="mt-2 text-default-500 text-sm sm:text-base leading-7">
+          {dicts.contact.reachOut}
+        </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-4">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Input
-          type="email"
-          variant={"underlined"}
-          label="First Name"
-          placeholder="Don"
-          color="primary"
-          classNames={{
-            label: "font-semibold",
-          }}
-        />
-        <Input
+          isRequired
+          name="name"
           type="text"
-          variant={"underlined"}
-          label="Last Name"
-          placeholder="Doe"
-          color="primary"
+          variant="bordered"
+          label={dicts.contact.name}
+          placeholder={dicts.contact.namePlaceholder}
+          labelPlacement="outside"
           classNames={{
-            label: "font-semibold",
+            label: 'text-sm font-medium text-foreground',
+            inputWrapper:
+              'bg-default-50 border-default-200 hover:border-primary data-[hover=true]:bg-default-50 group-data-[focus=true]:border-primary',
           }}
         />
-      </div>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-4">
         <Input
+          isRequired
+          name="email"
           type="email"
-          variant={"underlined"}
-          label="First Name"
-          placeholder="Don"
-          color="primary"
+          variant="bordered"
+          label={dicts.contact.email}
+          placeholder={dicts.contact.emailPlaceholder}
+          labelPlacement="outside"
           classNames={{
-            label: "font-semibold",
-          }}
-        />
-        <Input
-          type="text"
-          variant={"underlined"}
-          label="Last Name"
-          placeholder="Doe"
-          color="primary"
-          classNames={{
-            label: "font-semibold",
+            label: 'text-sm font-medium text-foreground',
+            inputWrapper:
+              'bg-default-50 border-default-200 hover:border-primary data-[hover=true]:bg-default-50 group-data-[focus=true]:border-primary',
           }}
         />
       </div>
 
-      <div className="flex flex-col gap-4">
-        <p className="text-sm font-medium mb-4">Select Subject</p>
-        <RadioGroup orientation={isMobile ? "vertical" : "horizontal"}>
-          <Radio value="general-inquiry">
-            <span className="text-sm">General Inquiry</span>
-          </Radio>
-          <Radio value="product-review">
-            <span className="text-sm">Product Review</span>
-          </Radio>
-          <Radio value="mentoring">
-            <span className="text-sm">Mentoring</span>
-          </Radio>
-          <Radio value="project-inquiry">
-            <span className="text-sm">Project Inquiry</span>
-          </Radio>
-        </RadioGroup>
+      <div className="flex flex-col gap-3">
+        <p className="text-sm font-medium text-foreground">
+          {dicts.contact.selectSubject}
+        </p>
+        <div
+          className="grid grid-cols-2 gap-2.5 sm:gap-3"
+          role="radiogroup"
+          aria-label={dicts.contact.selectSubject}
+        >
+          {SUBJECTS.map((key) => {
+            const selected = subject === key;
+            return (
+              <button
+                key={key}
+                type="button"
+                role="radio"
+                aria-checked={selected}
+                onClick={() => setSubject(key)}
+                className={`rounded-2xl px-3.5 py-3.5 text-sm font-medium text-start border transition-all duration-200 ${
+                  selected
+                    ? 'bg-primary/10 border-primary text-primary shadow-none'
+                    : 'bg-default-50 border-default-200 text-foreground shadow-sm hover:bg-default-100'
+                }`}
+              >
+                {dicts.contact.subjects[key]}
+              </button>
+            );
+          })}
+        </div>
+        <input type="hidden" name="subject" value={subject} />
       </div>
-      <div className="flex gap-4">
-        <Input
-          type="email"
-          variant={"underlined"}
-          label="Message"
-          color="primary"
-          placeholder="Write your message..."
-          classNames={{
-            label: ["font-semibold" , 'group-data-[focused=true]:text-blue-100'],
-          }}
+
+      <Textarea
+        isRequired
+        name="message"
+        variant="bordered"
+        minRows={5}
+        label={dicts.contact.message}
+        placeholder={dicts.contact.messagePlaceholder}
+        labelPlacement="outside"
+        classNames={{
+          label: 'text-sm font-medium text-foreground',
+          inputWrapper:
+            'bg-default-50 border-default-200 hover:border-primary data-[hover=true]:bg-default-50 group-data-[focus=true]:border-primary',
+        }}
+      />
+
+      <motion.button
+        type="submit"
+        disabled={status === 'sending'}
+        whileHover={{ y: -1 }}
+        whileTap={{ scale: 0.98 }}
+        className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-primary text-primary-foreground py-3.5 px-4 text-sm font-semibold disabled:opacity-70"
+      >
+        <Icon
+          icon={
+            status === 'sent'
+              ? 'line-md:confirm-circle'
+              : 'line-md:email-twotone-to-email-twotone-transition'
+          }
+          className="w-5 h-5"
         />
-      </div>
-        <BaseButton className="bg-[#3D61FF] w-full text-white"><img className="w-4 h-4" src="/images/Fill.png" alt="Fill" /> Submit</BaseButton>
-    </div>
+        {status === 'sending'
+          ? dicts.contact.sending
+          : status === 'sent'
+            ? dicts.contact.sent
+            : dicts.contact.submit}
+      </motion.button>
+    </motion.form>
   );
 }
