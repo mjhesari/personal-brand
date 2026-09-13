@@ -12,11 +12,9 @@
 
 ### 🌐 Live Demo
 
-**[Open on Vercel](https://YOUR-PROJECT.vercel.app)**
+**[Open on Vercel](https://personal-brand-steel.vercel.app/en)**
 
-> Replace `https://YOUR-PROJECT.vercel.app` with your real Vercel deployment URL.
-
-[English](https://YOUR-PROJECT.vercel.app/en) · [فارسی](https://YOUR-PROJECT.vercel.app/fa)
+[English](https://personal-brand-steel.vercel.app/en) · [فارسی](https://personal-brand-steel.vercel.app/fa)
 
 </div>
 
@@ -108,7 +106,7 @@ App runs at `http://localhost:3000` (or the next free port).
 Create `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://YOUR-PROJECT.vercel.app
+NEXT_PUBLIC_SITE_URL=https://personal-brand-steel.vercel.app
 ```
 
 This value is used for SEO canonical / Open Graph base URL (`config/site-meta.ts`).
@@ -143,10 +141,12 @@ types/                    # shared types
 3. Set `NEXT_PUBLIC_SITE_URL` to your deployment URL.
 4. Deploy.
 
-Then put your live URL here and at the top of this README:
+Then your live URLs will be:
 
 ```text
-https://YOUR-PROJECT.vercel.app
+https://personal-brand-steel.vercel.app
+https://personal-brand-steel.vercel.app/en
+https://personal-brand-steel.vercel.app/fa
 ```
 
 ---
